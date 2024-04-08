@@ -246,3 +246,69 @@ const subString = (string: string) => {
 
 // const daysRemaining = getDaysUntilNewYear();
 // console.log(`Còn ${daysRemaining} ngày nữa là Tết Dương lịch.`);
+
+// bài 20
+
+// enum TypeData {
+//   String = "string",
+//   Object = "object",
+//   Number = "number",
+//   Boolean = "boolean",
+// }
+
+// const obj = {
+//   name: "trung",
+//   age: 18,
+//   isStatus: true,
+//   a: {
+//     a: [1, 2, 3],
+//     b: {
+//       c: 2,
+//     },
+//   },
+//   c: ["a", "b", "c"],
+//   e: {
+//     name: "string",
+//     arr: [1, 2, 3],
+//   },
+// };
+
+// const handleReset = (value: any) => {
+//   switch (typeof value) {
+//     case TypeData.String:
+//       return "";
+//     case TypeData.Object:
+//       if (Array.isArray(value)) {
+//         const newArr = value.map((item) => {
+//           if (typeof item === TypeData.String) {
+//             return "";
+//           } else {
+//             return 0;
+//           }
+//         });
+//         return newArr;
+//       } else {
+//         return resetData(value);
+//       }
+//     case TypeData.Number:
+//       return 0;
+//     case TypeData.Boolean:
+//       return false;
+//     default:
+//       console.log(console.error("error"));
+//       break;
+//   }
+// };
+
+// const resetData = (obj: any) => {
+//   const listValue = Object.values(obj);
+//   const listKey = Object.keys(obj);
+//   let objResult: any = {};
+//   listValue.map((item, index) => {
+//     const valueReset = handleReset(item);
+//     objResult[listKey[index]] = valueReset;
+//   });
+//   return objResult;
+// };
+
+// console.log(resetData(obj));
